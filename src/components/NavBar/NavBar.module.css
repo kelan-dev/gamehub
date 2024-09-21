@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.logo {
+  width: 5rem;
+  transition: all 0.3s;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.logo.expanded {
+  width: 0;
+  overflow: hidden;
+}
+
+.search {
+  flex: 1;
+  max-width: 20rem;
+  transition: all 0.3s;
+}
+
+.search.expanded {
+  max-width: 100%;
+}
+
+.toggle {
+  width: 5rem;
+  transition: all 0.3s;
+  text-align: right;
+}
+
+.toggle.expanded,
+.toggle.expanded svg {
+  width: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-inline-end: 2rem;
+  }
+
+  .toggle {
+    margin-inline-start: 2rem;
+  }
+
+  .logo.expanded,
+  .toggle.expanded {
+    margin-inline: 0;
+  }
+
+  .search {
+    max-width: 100%;
+  }
+}

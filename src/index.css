@@ -1,0 +1,90 @@
+:root {
+  color-scheme: dark light;
+
+  /* --neutral-10: hsl(0, 0%, 99%); */
+  /* --neutral-20: hsl(0, 0%, 98%); */
+  /* --neutral-30: hsl(0, 0%, 97%); */
+  /* --neutral-40: hsl(0, 0%, 96%); */
+  --neutral-50: hsl(0, 0%, 95%);
+  /* --neutral-60: hsl(0, 0%, 94%); */
+  /* --neutral-70: hsl(0, 0%, 93%); */
+  /* --neutral-80: hsl(0, 0%, 92%); */
+  /* --neutral-90: hsl(0, 0%, 91%); */
+  --neutral-100: hsl(0, 0%, 90%);
+  --neutral-150: hsl(0, 0%, 85%);
+  --neutral-200: hsl(0, 0%, 80%);
+  --neutral-300: hsl(0, 0%, 70%);
+  --neutral-400: hsl(0, 0%, 60%);
+  /* --neutral-500: hsl(0, 0%, 50%); */
+  --neutral-600: hsl(0, 0%, 40%);
+  --neutral-700: hsl(0, 0%, 30%);
+  --neutral-800: hsl(0, 0%, 20%);
+  --neutral-850: hsl(0, 0%, 15%);
+  /* --neutral-880: hsl(0, 0%, 12%); */
+  /* --neutral-900: hsl(0, 0%, 10%); */
+  /* --neutral-910: hsl(0, 0%, 9%); */
+  --neutral-920: hsl(0, 0%, 8%);
+  /* --neutral-930: hsl(0, 0%, 7%); */
+  /* --neutral-940: hsl(0, 0%, 6%); */
+  /* --neutral-950: hsl(0, 0%, 5%); */
+  /* --neutral-960: hsl(0, 0%, 4%); */
+  /* --neutral-970: hsl(0, 0%, 3%); */
+  /* --neutral-980: hsl(0, 0%, 2%); */
+  /* --neutral-990: hsl(0, 0%, 1%); */
+}
+
+[data-scheme="dark"] {
+  color-scheme: dark;
+
+  /* Dark Theme Palette */
+  --background: var(--neutral-920);
+  --surface-primary: var(--neutral-850);
+  --surface-secondary: var(--neutral-800);
+  --text-primary: var(--neutral-100);
+  --text-secondary: var(--neutral-400);
+  --text-inverse: var(--neutral-850);
+  --border-primary: none;
+}
+
+[data-scheme="light"] {
+  color-scheme: light;
+
+  /* Light Theme Palette */
+  --background: var(--neutral-50);
+  --surface-primary: var(--neutral-100);
+  --text-primary: var(--neutral-850);
+  --text-secondary: var(--neutral-700);
+  --text-inverse: var(--neutral-100);
+  --border-primary: 2px solid var(--neutral-850);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  transition: all 0.3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: clamp(1rem, 3vw + 1rem, 3rem);
+}
+
+h2 {
+  font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+}
+
+h3 {
+  font-size: clamp(1rem, 0.5vw + 0.8rem, 1.1rem);
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem;
+}

@@ -1,0 +1,31 @@
+.aside {
+  margin-block-start: 3rem;
+  margin-inline-end: 1rem;
+  display: none;
+}
+
+.importGamesBanner {
+  margin-block-start: 1rem;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .importGamesBanner {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    display: flex;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .aside {
+    flex: 0 0 12rem;
+    display: block;
+  }
+}

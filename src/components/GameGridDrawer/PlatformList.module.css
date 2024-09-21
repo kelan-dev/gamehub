@@ -1,0 +1,41 @@
+[data-scheme="dark"] .container {
+  --button-hover-background: var(--neutral-800);
+}
+
+[data-scheme="light"] .container {
+  --button-hover-background: var(--neutral-150);
+}
+
+.heading {
+  padding: 0.8rem 0 0.9rem 2rem;
+  border-bottom: 1px solid var(--neutral-600);
+  margin-block-start: 2rem;
+}
+
+.listItem {
+  padding: 0.9rem 0 0.9rem 3rem;
+}
+
+.button {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.button:hover {
+  background: var(--button-hover-background);
+}
+
+.caret {
+  pointer-events: none;
+  transition: transform 0.3s;
+}
+
+.container:has(.expanded) .caret {
+  transform: rotate(180deg);
+}
+
+.selected {
+  font-weight: bold;
+}

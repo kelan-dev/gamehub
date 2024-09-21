@@ -1,0 +1,18 @@
+[data-scheme="dark"] .container {
+  --container-border: var(--neutral-700);
+}
+
+[data-scheme="light"] .container {
+  --container-border: var(--neutral-800);
+}
+
+.container {
+  --border-radius: 0.7rem;
+
+  border: 2px solid var(--container-border);
+  border-radius: var(--border-radius);
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

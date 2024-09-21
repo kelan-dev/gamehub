@@ -1,0 +1,42 @@
+.container h2 {
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
+}
+
+.platformsContainer,
+.genresContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.platformsContainer {
+  gap: 0.2rem;
+}
+
+.genresContainer {
+  gap: 0.5rem;
+}
+
+.platform,
+.genre {
+  cursor: pointer;
+  align-items: center;
+}
+
+.platform:hover,
+.genre:hover {
+  text-decoration: underline;
+}
+
+.platform,
+.genre {
+  display: flex;
+  gap: 1rem;
+}
+
+.genre img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 5px;
+}

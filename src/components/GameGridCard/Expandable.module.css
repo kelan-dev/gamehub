@@ -1,0 +1,31 @@
+.relative {
+  position: relative;
+}
+
+.expandable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.show {
+  animation: animShow 300ms ease forwards;
+  transform-origin: top center;
+}
+
+@keyframes animShow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scaleY(1.05);
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

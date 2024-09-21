@@ -1,0 +1,103 @@
+[data-scheme="dark"] .container {
+  --input-text: var(--text-primary);
+  --input-background: var(--surface-secondary);
+
+  --input-hover-icon: var(--text-inverse);
+  --input-hover-text: var(--text-inverse);
+  --input-hover-background: var(--neutral-50);
+
+  --input-border: var(--border-primary);
+
+  --code-color: var(--neutral-300);
+  --code-hover-color: var(--neutral-700);
+}
+
+[data-scheme="light"] .container {
+  --input-text: var(--text-primary);
+  --input-background: var(--surface-primary);
+
+  --input-hover-icon: var(--text-primary);
+  --input-hover-text: var(--text-primary);
+  --input-hover-background: var(--neutral-50);
+
+  --input-border: var(--border-primary);
+
+  --code-color: var(--neutral-700);
+  --code-hover-color: var(--neutral-700);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  pointer-events: none;
+  left: 1rem;
+  transform: translateY(2px);
+}
+
+.input {
+  background: var(--input-background);
+  border: var(--input-border);
+  color: var(--input-text);
+  border-radius: 2rem;
+  transition: all 0.3s;
+  outline: none;
+  width: 100%;
+  padding-block: 0.4rem;
+  padding-inline: 3rem;
+}
+
+.input:hover,
+.input:focus {
+  background: var(--input-hover-background);
+  color: var(--input-hover-text);
+}
+
+.form:has(.input:hover) .icon,
+.form:has(.input:focus) .icon {
+  color: var(--input-hover-icon);
+}
+
+.hotkey {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    padding-block: 0.6rem;
+  }
+
+  .hotkey {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    pointer-events: none;
+    right: 1rem;
+  }
+
+  .code > * {
+    color: var(--code-color);
+    font-size: 0.7rem;
+  }
+
+  .key {
+    border: 1px solid var(--code-color);
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+  }
+
+  .form:has(.input:hover) .code > *,
+  .form:has(.input:focus) .code > * {
+    color: var(--code-hover-color);
+  }
+
+  .form:has(.input:hover) .key,
+  .form:has(.input:focus) .key {
+    border: 1px solid var(--code-hover-color);
+  }
+}

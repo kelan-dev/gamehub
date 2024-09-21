@@ -1,0 +1,76 @@
+[data-scheme="dark"] .container {
+  --container-background: var(--surface-primary);
+  --container-border: var(--neutral-700);
+
+  --detail-color: var(--text-secondary);
+
+  --tag-color: var(--text-secondary);
+  --tag-hover-color: var(--neutral-800);
+}
+
+[data-scheme="light"] .container {
+  --container-background: var(--background);
+  --container-border: var(--neutral-800);
+
+  --detail-color: var(--text-secondary);
+
+  --tag-color: var(--text-secondary);
+  --tag-hover-color: var(--neutral-100);
+}
+
+.container {
+  --border-radius: 0.7rem;
+
+  position: relative;
+  background: var(--container-background);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-right: 2px solid var(--container-border);
+  border-left: 2px solid var(--container-border);
+  border-bottom: 2px solid var(--container-border);
+  padding: 0 1rem 1rem;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--container-border);
+  padding-block: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.genre {
+  border: none;
+  background-color: inherit;
+  color: var(--detail-color);
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.genre:hover {
+  text-decoration: underline;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--tag-color);
+  margin-block-start: 1rem;
+}
+
+.tag {
+  border: 1px solid var(--container-border);
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.tag:hover {
+  background: var(--tag-hover-color);
+}

@@ -1,0 +1,42 @@
+[data-scheme="dark"] .container {
+  --container-background: var(--surface-primary);
+  --container-border: var(--neutral-700);
+}
+
+[data-scheme="light"] .container {
+  --container-background: var(--background);
+  --container-border: var(--neutral-800);
+}
+
+.container {
+  background: var(--container-background);
+  border-right: 2px solid var(--container-border);
+  border-left: 2px solid var(--container-border);
+  padding: 1rem;
+}
+
+.platforms {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.platforms img {
+  position: absolute;
+  top: -0.5rem;
+  right: 0;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.name {
+  margin-block-start: 1rem;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

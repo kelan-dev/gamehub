@@ -1,0 +1,14 @@
+.buttons {
+  margin-block: 2rem 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,21 @@
+[data-scheme="dark"] .container {
+  --container-background: var(--surface-secondary);
+  --container-border: var(--border-primary);
+}
+
+[data-scheme="light"] .container {
+  --container-background: var(--surface-primary);
+  --container-border: var(--border-primary);
+}
+
+.container {
+  background: var(--container-background);
+  border: var(--container-border);
+  border-radius: 0.3rem;
+  display: inline-block;
+  min-width: 10rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,15 @@
+.toggle {
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+}
+
+.toggle:hover {
+  transform: scale(1.2);
+}
